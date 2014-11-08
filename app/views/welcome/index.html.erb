@@ -16,7 +16,7 @@
 		<%= link_to 'Not a user? Sign up!', new_user_path %>
 
 	<% else %>
-	welcome user!
-		<% link_to "Logout", logout_path, method: :destroy %>
+	<h1>Welcome <%= @user.email %>!</h1>
+		<%= link_to "Logout", logout_path, method: :destroy %>
 	<% end %>
 </div>
