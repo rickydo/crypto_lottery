@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>current jackpot</h1>
+	<h1>$567856785678!</h1>
+</div>
+
+
+<div class="signing_in">
+	
+	<%= form_tag("/login", :method => "post") do %>
+		<%= text_field_tag :username, nil, placeholder: :Username %><br>
+		<%= password_field_tag :password, nil, placeholder: :Password %><br>
+		<%= submit_tag :Login %>
+		<% end %>
+		<%= flash[:error] if flash[:error] %>
+
+	<%= link_to 'Not a user? Sign up!', new_user_path %>
+
+</div>

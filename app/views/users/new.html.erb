@@ -1,0 +1,7 @@
+<%= form_for @user, url: {action: "create"} do |f| %>
+		<%= f.text_field :email, placeholder: "Email" %><br>
+		<%= f.password_field :password, placeholder: "password" %><br>
+		<%= f.password_field :password_confirmation, placeholder: "pw confirmation" %><br>
+		<%= f.submit "Sign Up" %>
+	<% end %>
+<%= flash[:error] if flash[:error] %>
