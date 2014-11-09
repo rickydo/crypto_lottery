@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 	def new_user_params
 		params.require(:user).permit(
 			:email,
+			:coin_address,
 			:password,
 			:password_confirmation
 			)
