@@ -6,7 +6,7 @@ class TicketsController < ApplicationController
 	def create
 		@ticket = Ticket.new(new_ticket_params)
 		if @ticket.save
-			flash[:notice] = "You have successfully bought a ticket"
+			TicketMailer.welcome_email(@ticket).deliver
 			redirect_to root_path
 		else
 			flash[:error] = @ticket.errors.empty? ? "Error" : @ticket.errors.full_messages.to_sentence
