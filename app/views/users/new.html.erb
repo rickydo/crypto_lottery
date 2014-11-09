@@ -1,5 +1,6 @@
 <%= form_for @user, url: {action: "create"} do |f| %>
 		<%= f.text_field :email, placeholder: "Email" %><br>
+		<%= f.text_field :coin_address, placeholder: "Coin address" %><br>
 		<%= f.password_field :password, placeholder: "password" %><br>
 		<%= f.password_field :password_confirmation, placeholder: "pw confirmation" %><br>
 		<%= f.submit "Sign Up" %>
